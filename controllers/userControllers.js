@@ -19,7 +19,7 @@ let showUser = function(req,res){
   res.json(found)
 }
 
-//INCOMPLETE - NEEDS ADDRESS AND COMPANY UPDATED. Add an element
+//DONE Add an element
 let createUser = function (req,res){
   let idCounter = db.length+1
   req.body.id = idCounter
@@ -40,7 +40,7 @@ let createUser = function (req,res){
     
 }
 
-//INCOMPLETE - NEEDS ADDRESS AND COMPANY UPDATED. Update an element by id 
+//DONE Update an element by id 
 let updateUser = function(req,res){
   let id = req.params.id
   let name = req.body.name
