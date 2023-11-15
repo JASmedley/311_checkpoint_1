@@ -3,7 +3,7 @@ const app = express()
 
 app.use(express.json())
 app.use(express.static("./public/index.html"))
-app.use(require("./routes/userRoutes"))
+app.use(require("./routes/recipeRoutes"))
 
 
 const port = process.env.PORT || 4000
