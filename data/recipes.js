@@ -1,42 +1,11 @@
-module.exports = [
-  {
-    "id": 1,
-    "name": "Stuffing",
-    "ingredients": [],
-    "amounts":[],
-    "allergens": [],
-    "dietary":[]
-  },
-  {
-    "id": 2,
-    "name": "Brown Gravy",
-    "ingredients": [],
-    "amounts":[],
-    "allergens": [],
-    "dietary":[]
-  },
-  {
-    "id": 3,
-    "name": "Cranberry Sauce",
-    "ingredients": [],
-    "amounts":[],
-    "allergens": [],
-    "dietary":[]
-  },
-  {
-    "id": 4,
-    "name": "Sweet Potato Casserole",
-    "ingredients": [],
-    "amounts":[],
-    "allergens": [],
-    "dietary":[]
-  },
-  {
-    "id": 5,
-    "name": "Green Bean Casserole",
-    "ingredients": [],
-    "amounts":[],
-    "allergens": [],
-    "dietary":[]
-  }
-]
+let mysql =  require("mysql");
+
+let connection = mysql.createPool({
+  user: process.env.DB_User,
+  password: process.env.DB_Password,
+  host:process.env.DB_Host,
+  database: process.env.DB_DataBase,      
+  port: process.env.DB_Port
+})
+
+module.exports = connection;

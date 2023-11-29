@@ -1,15 +1,10 @@
-const express = require('express')
-const app = express()
+require("dotenv").config();
+let express = require("express");
+const port = 4000;
 
-app.use(express.json())
-app.use(express.static("./public/index.html"))
-app.use(require("./routes/recipeRoutes"))
-
-
-const port = process.env.PORT || 4000
-
-// app.get('/', (req, res) => res.send('default route'))
-
-app.listen(port, () => {
-  console.log('app is listening on:', port)
-})
+express().use(express.json());
+express().use(express.static("./public/index.html"));
+express().use(require("./routes/recipeRoutes"));
+express().listen(port, () => {
+  console.log('App is listening on:', port)
+});

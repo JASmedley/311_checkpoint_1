@@ -1,18 +1,17 @@
 let express = require("express");
-
 let router = express.Router()
 let controller = require("../controllers/recipeControllers")
 
 
-//Return all users
+//Return all recipes
 router.get("/recipes", controller.listRecipes)
-//Return just the user that matches the path param (id)
+//Return just the recipe that matches the path param (id)
 router.get("/recipes/:id", controller.showRecipe)
-//Create a new user (sampleUser).
+//Create a new recipe (sampleUser).
 router.post("/recipes", controller.createRecipe)
-//Update one user matching the path param (id). 
+//Update one recipe matching the path param (id). 
 router.put("/recipes/:id", controller.updateRecipe)
-//Delete one user by its id
+//Delete one recipe by its id
 router.delete("/recipes/:id", controller.deleteRecipe)
 
 
